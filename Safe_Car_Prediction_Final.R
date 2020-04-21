@@ -1,7 +1,7 @@
 #
 # Date: 11/25/2019
 
-# Team members: Anita Nyaga, Huong Dang, Deri Chong, Yaya Liu, Po-Hsuan Su, Zhaobo Jiang
+
 
 # Poject Objective: To build models that will predict whether a driver will initiate an auto insurance claim in the next year
 
