@@ -1,11 +1,7 @@
-#
-# Date: 11/25/2019
 
+# Objective: To build models that will predict whether a driver will initiate an auto insurance claim in the next year
 
-
-# Poject Objective: To build models that will predict whether a driver will initiate an auto insurance claim in the next year
-
-# Input: car_insurance_claim.csv (original dataset from Kaggle: https://www.kaggle.com/xiaomengsun/car-insurance-claim-data)
+# Input: car_insurance_claim.csv (Dataset is also avaialbe on Kaggle but didn't have any Kernal discussion when I worked on this project)
 
 # Workflow: data exploratory analysis and visualization - > 
 #           data-preprocessing -> 
@@ -55,7 +51,7 @@ for (i in (1:ncol(df0))){
 }
 nums = which(num > 2) # if # of unique variable > 2 --> num; <=2 assign as factors
 df0[-nums] <- lapply( df0[-nums], factor)
-summary(df0) # check the summary 
+summary(df0) # shows the summary statistitics  
 df0 = df0[-which(df0$CAR_AGE==-3),] # Remove one abnormal row CAR_AGE = -3 ## 10301* 25
 
 ############ Corrplot including KIDSDRIV; HOMEKIDS; CLM_FREQ
@@ -178,7 +174,7 @@ M_train = imputeMissings(train)
 # Character vectors and factors are imputed with the mode. 
 # Numeric and integer vectors are imputed with the median.
 summary(M_train) # check the summary 
-sum(is.na(M_train)) #0
+sum(is.na(M_train)) #result is 0 
 
 ############ SMOTE Train set should be BEFORE one-hot to avoid duplicate value in the same category
 library(lattice)
